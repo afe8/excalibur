@@ -10,7 +10,7 @@ RUN git clone https://www.github.com/camelot-dev/excalibur
 RUN pwd
 RUN pip install /excalibur
 RUN sed -i 's/from camelot.ext.ghostscript import Ghostscript/from ghostscript import Ghostscript/' /usr/local/lib/python3.8/dist-packages/excalibur/tasks.py
-RUN pip install itsdangerous==2.0.1 Jinja2==3.0.3 celery==4.1.1 pg8000
+RUN pip install itsdangerous==2.0.1 Jinja2==3.0.3 celery==4.1.1
 COPY docker-excalibur.cfg /root/excalibur/excalibur.cfg 
 #RUN excalibur initdb
 #ENTRYPOINT excalibur webserver
