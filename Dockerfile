@@ -3,7 +3,7 @@ RUN apt-get update
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:deadsnakes/ppa
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get install -y python3.8 python3.8-distutils wget ghostscript python3-tk ffmpeg libsm6 libxext6 git python3-dev libpq-dev build-essential
+RUN apt-get install -y python3.8 python3.8-distutils wget ghostscript python3-tk ffmpeg libsm6 libxext6 git python3.8-dev libpq-dev build-essential
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3.8 get-pip.py
 RUN git clone https://www.github.com/camelot-dev/excalibur
